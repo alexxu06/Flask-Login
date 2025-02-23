@@ -1,0 +1,63 @@
+
+.wrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+.wrapper h1 {
+    text-align: center;
+}
+
+.input-box {
+    background-color: transparent;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.input-box p {
+    color: gray;
+}
+
+.input-box input {
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: rgb(186, 185, 185);
+    border-radius: 10px;
+    margin-top: 0.2rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.input-box input::placeholder {
+    font-size: 16px;
+}
+
+button {
+    margin-top: 2rem;
+    background: rgb(70, 85, 251);   
+    color: white;
+    padding: 0.7rem;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+}
+
+.buttons p {
+    margin-top: 1rem;
+    text-align: center;
+    color: gray;
+}
+
+.buttons button:hover {
+    background: rgb(35, 54, 253);
+    cursor: pointer;
+}
+
+
+.buttons p:hover {
+    color: blue;
+    cursor: pointer;
+}

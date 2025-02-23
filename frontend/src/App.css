@@ -1,74 +1,27 @@
-#root {
-    display: flex;
-    justify-content: center;
+.outer-wrapper {
     width: 30rem;
-    height: 60vh;
-    padding: 30px;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    border-radius: 5px;
 }
 
-.wrapper {
-    width: 100%;
+/* @media only screen and (max-width: 1200px) {
+    .outer-wrapper {
+        width: 40vw;
+    }
 }
 
-h1 {
-    text-align: center;
+@media only screen and (max-width: 1000px) {
+    .outer-wrapper {
+        width: 50vw;
+    }
 }
 
-.input-box {
-    height: 70px;
-    background-color: transparent;
-    margin-top: 40px;
-}
+@media only screen and (max-width: 800px) {
+    .outer-wrapper {
+        width: 65vw;
+    }
+} */
 
-.input-box p {
-    margin-bottom: 0;
-    color: gray;
-}
-
-.input-box input {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid;
-    border-color: rgb(186, 185, 185);
-    height: 60px;
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 15px;
-    font-size: 16px;
-}
-
-.input-box input::placeholder {
-    font-size: 16px;
-}
-
-button {
-    margin-top: 70px;
-    background: rgb(70, 85, 251);   
-    color: white;
-    padding: 10px;
-    width: 100%;
-    height: 40px;
-    border-radius: 15px;
-    border: none;
-    font-weight: bold;
-}
-
-.buttons p {
-    text-align: center;
-    color: gray;
-}
-
-.buttons button:hover {
-    background: rgb(35, 54, 253);
-    cursor: pointer;
-}
-
-
-.buttons p:hover {
-    color: blue;
-    cursor: pointer;
-}
+@media only screen and (max-width: 500px) {
+    .outer-wrapper {
+        width: 20rem;
+    }
+} 
