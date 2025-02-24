@@ -35,7 +35,13 @@ def signup():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
     admin = request.json.get("admin", None)
+
+    if User.query.filter(User.username==username).first():
+        return "Username taken", 401
     
+    if User.query.filter(User.email==email).first():
+        return "Email already in use", 401
+
     user = User(email=email, username=username, admin=admin)
     user.set_password(password)
     db.session.add(user)
