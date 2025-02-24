@@ -13,4 +13,5 @@ Uses flask as backend and react as frontend. JWT tokens will be used to authenti
 ## Resources Used
 - [Flask-JWT-Extended’s Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
 - [Axios Docs](https://axios-http.com/docs/intro)
+- [React Router Official Documentation](https://reactrouter.com/home)
 - [30-Days-Of-React](https://github.com/Asabeneh/30-Days-Of-React/blob/master/01_Day_JavaScript_Refresher/01_javascript_refresher.md)
