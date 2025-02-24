@@ -1,6 +1,6 @@
 import './LandingPage.css'
 import pic from '../../images/monkey.png'
-import { Navigate, Route, useNavigate} from 'react-router-dom'
+import { Navigate, useNavigate} from 'react-router-dom'
 
 function LandingPage() {
     let navigate = useNavigate();

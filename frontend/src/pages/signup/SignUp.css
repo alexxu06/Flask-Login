@@ -1,0 +1,8 @@
+.checkbox-input-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    margin-top: 2rem;
+    width: 100%;
+    color: gray;
+}

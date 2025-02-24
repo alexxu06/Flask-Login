@@ -35,14 +35,15 @@ def signup():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
     admin = request.json.get("admin", None)
-
+    
     user = User(email=email, username=username, admin=admin)
     user.set_password(password)
     db.session.add(user)
     db.session.commit()
 
-    access_token = create_access_token(identity=user, additional_claims={"admin": user.admin})
-    set_access_cookies("success", access_token)
+    response = jsonify({"msg": "successfully signed up"})
+    access_token = create_access_token(identity=username, additional_claims={"admin": user.admin})
+    set_access_cookies(response, access_token)
 
     return jsonify({"msg": "successfully signed up", "token": access_token})
 
@@ -50,20 +51,20 @@ def signup():
 
 @app.route("/login", methods=["POST"])
 def login():
-    email = request.json.get("email", None)
-    username = request.json.get("username", None)
+    username_or_email = request.json.get("username_or_email", None)
     password = request.json.get("password", None)
 
-    user = User.query.filter_by((email==email) | (username==username)).one_or_none()
+    user = User.query.filter((User.email==username_or_email) | (User.username==username_or_email)).one_or_none()
 
-    if not user or user_by_username:
+    if not user:
         return "User does not exist", 401
 
     if not user.check_password(password):
         return "Wrong password", 401
     
-    access_token = create_access_token(identity=user, additional_claims={"admin": user.admin})
-    set_access_cookies("success", access_token)
+    response = jsonify({"msg": "successfully logged in"})
+    access_token = create_access_token(identity=username_or_email, additional_claims={"admin": user.admin})
+    set_access_cookies(response, access_token)
     return jsonify({"msg": "successfully logged in", "token": access_token})
 
 @app.route("/logout", methods=["POST"])
@@ -82,4 +83,3 @@ def home():
         return jsonify({"msg": "Welcome {username}, you are a admin!"})
     else:
         return "Welcome {username}!"
-    
