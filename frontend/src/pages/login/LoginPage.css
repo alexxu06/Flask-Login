@@ -1,11 +1,19 @@
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(70, 85, 251); 
+}
 
-.wrapper {
+.login-wrapper {
+    width: 24rem;
     background-color: white;
     border-radius: 10px;
     padding: 3rem;
 }
 
-.wrapper h1 {
+.login-wrapper h1 {
     text-align: center;
 }
 
@@ -34,7 +42,7 @@
     font-size: 16px;
 }
 
-button {
+.login-wrapper button {
     margin-top: 2rem;
     background: rgb(70, 85, 251);   
     color: white;
@@ -45,7 +53,7 @@ button {
     font-weight: bold;
 }
 
-.buttons p {
+.login-wrapper .buttons p {
     margin-top: 1rem;
     text-align: center;
     color: gray;
@@ -61,3 +69,9 @@ button {
     color: blue;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        width: 15.5rem;
+    }
+} 

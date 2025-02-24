@@ -1,0 +1,86 @@
+.landing-background {
+    background: rgb(70, 85, 251);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-background .monkey-img {
+    width: auto;
+    height: 35rem;
+    margin: 1rem;
+    border-radius: 15px;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.landing-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin: 5rem;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 50%;
+    height: 70vh;
+}
+
+.landing-main-wrapper h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.landing-main-wrapper h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 6rem;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    width: 20rem;
+    height: 3rem;
+}
+
+.button-container button {
+    background: transparent;
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+}
+
+.button-container .sign-up-btn {
+    background-color: white;
+    color:rgb(70, 85, 251);
+    border: none;
+}
+
+.button-container .sign-up-btn:hover {
+    background: rgb(224, 224, 224);
+    cursor: pointer;
+}
+
+.button-container .log-in-btn:hover {
+    background: rgb(61, 75, 221);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .landing-background .monkey-img {
+        display: none;
+    }
+
+    .landing-main-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+} 

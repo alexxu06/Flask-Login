@@ -1,27 +1,4 @@
-.outer-wrapper {
-    width: 30rem;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-/* @media only screen and (max-width: 1200px) {
-    .outer-wrapper {
-        width: 40vw;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .outer-wrapper {
-        width: 50vw;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .outer-wrapper {
-        width: 65vw;
-    }
-} */
-
-@media only screen and (max-width: 500px) {
-    .outer-wrapper {
-        width: 20rem;
-    }
-} 
