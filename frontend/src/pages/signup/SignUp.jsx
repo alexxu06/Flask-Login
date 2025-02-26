@@ -13,23 +13,26 @@ function SignUp() {
 
     const signup = () => {
         if (username.trim() == "") {
-            alert("Please enter a username or email");
+            alert("Please enter a username");
         } else if (email.trim() == "") {
             alert("Please enter a email");
         } else if (password.trim() == "") {
             alert("Please enter a password");
         } else {
-            axios.post("http://127.0.0.1:5000/signup", {
+            axios.post("/api/signup", {
                 email: email,
                 username: username,
                 password: password,
                 admin: admin
+            }, {
+                withCredentials: true
             })
             .then(function (response) {
+                console.log(response)
                 navigate("/home");
             })
             .catch(function (error) {
-                alert(error.response.data);
+                alert(error);
             });
         }
     }
@@ -47,6 +50,7 @@ function SignUp() {
     }
 
     const onAdminChange = (e) => {
+        console.log(e.target.checked)
         setAdmin(e.target.checked);
     }
 

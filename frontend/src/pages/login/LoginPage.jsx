@@ -15,11 +15,14 @@ function LoginPage() {
         } else if (password.trim() == "") {
             alert("Please enter a password");
         } else {
-            axios.post("http://127.0.0.1:5000/login", {
+            axios.post("/api/login", {
                 username_or_email: userOrEmail,
                 password: password
+            }, {
+                withCredentials: true
             })
             .then(function (response) {
+                console.log(response)
                 navigate("/home");
             })
             .catch(function (error) {

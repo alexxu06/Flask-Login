@@ -1,6 +1,7 @@
 import './LandingPage.css'
 import pic from '../../images/monkey.png'
 import { Navigate, useNavigate} from 'react-router-dom'
+import axios from "axios"
 
 function LandingPage() {
     let navigate = useNavigate();
