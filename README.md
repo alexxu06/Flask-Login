@@ -1,4 +1,4 @@
-# Simple Login Web Application
+# Simple Social Media Web Application
 
 ## Overview
 Uses flask as backend and react as frontend. JWT tokens will be used to authenticate user.
