@@ -26,6 +26,7 @@ function LoginPage() {
                 navigate("/home");
             })
             .catch(function (error) {
+                console.log(error)
                 alert(error.response.data);
             });
         }

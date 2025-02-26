@@ -4,7 +4,7 @@ import { Navigate, useNavigate} from 'react-router-dom'
 
 function Home() {
     let navigate = useNavigate();
-    
+
     const [username, setUsername] = useState("")
     const [admin, setAdmin] = useState(false)
 
@@ -26,7 +26,7 @@ function Home() {
         });
     }
 
-    const loginOut = () => {
+    const logout = () => {
         axios.post("/api/logout", {
             withCredentials: true
         })
@@ -43,7 +43,7 @@ function Home() {
     return(
         <div>
             <p>Welcome {username}, you are {admin ? "a" : "NOT a"} <b>ADMIN</b></p>
-            <button onClick={loginOut} className='log-in-btn'>Log out</button>
+            <button onClick={logout} className='log-in-btn'>Log out</button>
         </div>
     )
 }

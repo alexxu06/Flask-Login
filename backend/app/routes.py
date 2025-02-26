@@ -16,18 +16,18 @@ from datetime import timezone
 
 import json
 
-# @app.after_request
-# def refresh_expiring_tokens(response):
-#     try:
-#         expiration_time = get_jwt()["exp"]
-#         now = datetime.now(timezone.utc)
-#         time_to_refresh = datetime.timestamp(now + timedelta(minutes=0.2))
-#         if time_to_refresh > expiration_time:
-#             access_token = create_access_token(identity=get_jwt_identity(), additional_claims={"admin": get_jwt("admin")})
-#             set_access_cookies(response, access_token)
-#         return response
-#     except (RuntimeError, KeyError):
-#         return response
+@app.after_request
+def refresh_expiring_tokens(response):
+    try:
+        expiration_time = get_jwt()["exp"]
+        now = datetime.now(timezone.utc)
+        time_to_refresh = datetime.timestamp(now + timedelta(minutes=0.2))
+        if time_to_refresh > expiration_time:
+            access_token = create_access_token(identity=get_jwt_identity(), additional_claims={"admin": get_jwt()["admin"]})
+            set_access_cookies(response, access_token)
+        return response
+    except (RuntimeError, KeyError):
+        return response
 
 
 # When creating access tokens, I am using the unique id number of each user
